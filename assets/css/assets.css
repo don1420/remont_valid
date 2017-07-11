@@ -391,9 +391,6 @@ body {
 	font-size: 32px;
 }
 
-.wrap-outer {
-	margin-top: 230px;
-}
 
 
 .hidden {
@@ -616,6 +613,80 @@ body {
 
 #portfolio ul li a[href*="32.jpg"] {
 	background-image: url("../images/portfolio/32.jpg");
+}
+
+#customer_choice h3 {
+	width: 1300px;
+	margin: 0 auto; 
+	margin-top: 110px;
+	margin-bottom: 90px;
+}
+
+#customer_choice table {
+	width: 1300px;
+	margin: 0 auto;
+}
+
+#customer_choice td {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#customer_choice .wrap-outer {
+	width: 350px;
+	margin-top: 0;
+}
+
+#customer_choice tr:first-child td:nth-child(2) .wrap-outer,
+#customer_choice tr:nth-child(2) td:nth-child(2) .wrap-outer,
+#customer_choice tr:nth-child(3) td:nth-child(2) .wrap-outer {
+	margin: 0 auto;
+}
+
+#customer_choice tr:first-child td:nth-child(3),
+#customer_choice tr:nth-child(2) td:nth-child(3),
+#customer_choice tr:nth-child(3) td:nth-child(3) {
+	text-align: right;
+}
+
+#customer_choice tr:first-child td:nth-child(3) .wrap-outer,
+#customer_choice tr:nth-child(2) td:nth-child(3) .wrap-outer,
+#customer_choice tr:nth-child(3) td:nth-child(3) .wrap-outer {
+	display: inline-block;
+	text-align: left;
+}
+
+#customer_choice td {
+	padding-bottom: 40px;
+}
+
+#portfolio table {
+	width: 1300px;
+	margin: 0 auto;
+}
+
+#portfolio td {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#portfolio h3 {
+	width: 1300px;
+	margin: 0 auto; 
+	margin-top: 110px;
+	margin-bottom: 90px;
+}
+
+#portfolio tr td:first-child {
+	width: 35%;
+}
+
+#portfolio tr td:last-child {
+	width: 65%;
+}
+
+#portfolio td {
+	padding-bottom: 40px;
 }
 
 
