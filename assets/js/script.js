@@ -1079,13 +1079,13 @@
             output = element.parentNode.getElementsByTagName('output')[0];
             output.innerHTML = value;
             total1 = document.getElementById('total1');
-            total2 = document.getElementById('total2');
+            //total2 = document.getElementById('total2');
             type = $('input[name="type"]:checked').val();
             remont = $('input[name="remont"]:checked').val();
             limit = document.getElementById('limit');
             sum = value*remont;
             total1.innerHTML = sum;
-            total2.innerHTML = sum;
+            //total2.innerHTML = sum;
       }
       for (var i = $inputRange.length - 1; i >= 0; i--) {
         valueOutput($inputRange[i]);
@@ -1095,18 +1095,44 @@
       });
       $('input').on('change', function() {
         total1 = document.getElementById('total1');
-        total2 = document.getElementById('total2');
+        //total2 = document.getElementById('total2');
         area1 = parseFloat(+document.getElementById('area1').innerHTML);
-        area = parseFloat(+document.getElementById('area').innerHTML);
+        //area = parseFloat(+document.getElementById('area').innerHTML);
         type = $('input[name="type"]:checked').val();
         remont = $('input[name="remont"]:checked').val();
         limit = document.getElementById('limit');
         sum1 = area1*remont;
-        sum = area*remont;
+        //sum = area*remont;
         total1.innerHTML = sum1;
-        total2.innerHTML = sum;
+        //total2.innerHTML = sum;
       });
       $inputRange.rangeslider({
         polyfill: false,
       });
     });
+
+    //Всплывающая форма
+$(document).ready(function() {
+  
+  $(".popup_c").magnificPopup();
+  $(".popup").magnificPopup();
+
+
+  $(".popup_c").click(function() {
+  		$("#hidden_form").addClass("fadeInDown animated");
+  });
+
+  	//увеличение картинок - плагин simplebox
+	var boxes=[],els,i,l;
+	if(document.querySelectorAll){
+		els=document.querySelectorAll('a[data-rel=simplebox]');	
+		Box.getStyles('simplebox_css','assets/js/simplebox/simplebox.css');
+		Box.getScripts('simplebox_js','assets/js/simplebox/simplebox.js',function(){
+			simplebox.init();
+			for(i=0,l=els.length;i<l;++i)
+				simplebox.start(els[i]);
+			simplebox.start('a[data-rel=simplebox_group]');			
+		});
+	}
+
+});
